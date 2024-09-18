@@ -55,7 +55,23 @@ This project is a mood-based music recommendation web application. Users can sea
 
 ## Project Structure
 
-```musicdb_project/ ├── app/ │ ├── init.py │ ├── routes.py │ ├── templates/ │ │ ├── index.html │ │ └── results.html ├── static/ │ ├── style.css ├── venv/ │ └── ... ├── musicdb_dump.sql ├── requirements.txt ├── run.py └── README.md```
+```
+project-directory/
+│
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── templates/
+│   │   ├── index.html
+│   │   ├── results.html
+│   ├── static/
+│       └── (static files like CSS or images)
+│
+├── musicdb_dump.sql
+├── run.py
+├── requirements.txt
+└── README.md
+```
 
 ## Troubleshooting
 
