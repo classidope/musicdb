@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if data %}
+        <ul>
+            <h2>songs with {{ Mood }} mood are: </h2>
+            {% for song in data %}
+                <li>{{ song[1] }} by {{ song[2] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+        <p>go home</p>
+    {% endif %}
+</body>
+</html>

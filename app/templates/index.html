@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>musicdb</title>
+</head>
+<body>
+    <h1>Welcome to <em>musicdb</em></h1>
+
+    <h2>default moods for now are: </h2>
+    <ul>
+        {% for mood in Moods %}
+            <li>{{ mood }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="/search" method="get">
+        <input type="text" placeholder="enter mood here" name="mood">
+        <button>Submit</button>
+    </form>
+</body>
+</html>
