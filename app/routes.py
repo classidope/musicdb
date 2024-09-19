@@ -40,5 +40,3 @@ def get_mood():
 
 
     return render_template('results.html', data=data, Mood=mood)
-
-@app.route('/insert', methods=['POST'])
