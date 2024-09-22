@@ -1,0 +1,55 @@
+
+body{
+    background-color: rgb(16, 16, 16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+ul{
+    list-style: none;
+    color: rgb(245, 245, 245);
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    scale: 140%;
+}
+h2{
+    font-family: 'Space Mono', monospace;
+    color: rgb(245, 245, 245);
+}
+h2 span{
+    color: #e4dd1a;
+}
+
+li {
+    transition: scale 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+li:hover {
+    scale: 1.10;
+}
+li:hover span{
+    color: #e4dd1a;
+}
+
+@media only screen and (max-width: 600px) {
+    h2{
+        scale: 80%;
+    }
+    li{
+        scale: 80%;
+    }
+    li:hover{
+        scale:0.90;
+    }
+
+}

@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>musicdb</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>Welcome to <em>musicdb</em></h1>
+    <h1>Welcome to <span>musicdb</span></h1>
 
-    <h2>default moods for now are: </h2>
-    <ul>
-        {% for mood in Moods %}
-            <li>{{ mood }}</li>
-        {% endfor %}
-    </ul>
+    <h2>Choose a mood to get started</h2>
+    <div class="button-container">
+        <form action="/search" method="get">
+        <ul>
 
-    <form action="/search" method="get">
-        <input type="text" placeholder="enter mood here" name="mood">
-        <button>Submit</button>
-    </form>
+            {% for mood in Moods %}
+            <button name="mood" value="{{ mood }}" type="submit">{{ mood }}</button>
+            {% endfor %}
+        </ul>
+    </div>
+
+<footer><p>•a classid and kuttapan initiative•</p></footer>
 </body>
 </html>

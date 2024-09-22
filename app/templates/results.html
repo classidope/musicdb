@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../static/result.css">
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+    <title>result</title>
 </head>
 <body>
     {% if data %}
         <ul>
-            <h2>songs with {{ Mood }} mood are: </h2>
+            <h2>Here are some <span>{{ Mood }}</span> songs </h2>
             {% for song in data %}
-                <li>{{ song[1] }} by {{ song[2] }}</li>
+                <li><span>{{ song[2] }}</span><br/> by  {{ song[1] }}</li>
+                <br/>
             {% endfor %}
         </ul>
     {% else %}
