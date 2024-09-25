@@ -88,6 +88,41 @@ h1:hover:after {
     }
 } 
 
+.booba-container {
+    position: fixed;
+    bottom: 0;
+
+  /* And if you want the div to be full-width: */
+    left: 1;
+    right: 0;
+}
+
+.arrow-text {
+    font-family: monospace;
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #f542d4; /* Funky color contrasting with button */
+}
+
+.arrow-text::after {
+    content: '↓'; 
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #f542d4; /* Same funky color */
+}
+
+
+#boobas {
+    border: none;
+    background: none;
+    outline: none;
+    color: #e4dd1a;
+}
+
 @media only screen and (max-width: 600px) {
     body {
     

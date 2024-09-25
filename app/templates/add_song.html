@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLG Add a New Song</title>
+    <div class="page-content">
+        <!-- Your spinning content here -->
+    </div>
+    <style>
+        /* Crazy rotating anime background */
+        body {
+            background-image: url('https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif'); /* Spinning anime gif */
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: rotateBackground 10s infinite linear;
+            color: #ff00ff; /* Vibrant font color */
+            font-family: 'Comic Sans MS', cursive;
+        }
+        .random-gif {
+            position: absolute;
+            width: 100px; /* Adjust size as needed */
+            opacity: 0.8;
+        }
+
+        @keyframes rotateBackground {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #00ff00; /* Bright green text */
+            text-shadow: 3px 3px #ff0000;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+
+        .form-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        label {
+            font-size: 30px;
+            color: #00ffff;
+            text-shadow: 2px 2px #ff0000;
+        }
+
+        input[type="text"] {
+            font-size: 24px;
+            padding: 10px;
+            border: 2px solid #ff0000;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .submit-btn {
+            font-size: 30px;
+            color: #ff0000;
+            padding: 15px 30px;
+            background-color: #ffff00;
+            border: none;
+            cursor: pointer;
+            animation: rainbow 2s infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-color: #ff0000; }
+            25% { background-color: #00ff00; }
+            50% { background-color: #0000ff; }
+            75% { background-color: #ff00ff; }
+            100% { background-color: #ffff00; }
+        }
+
+        .mlg-icon {
+            width: 100px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            animation: spin 3s infinite linear;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #fixed-button {
+            position: fixed;  /* Keeps the button fixed in one place */
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;    /* Ensures it's above other content */
+            transform: rotate(-90deg); /* Counteract the rotation of the page */
+        }
+
+        #fixed-button:hover {
+            background-color: #45a049;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>ADD YOUR SONG - MLG STYLE</h1>
+
+    <div class="form-container">
+        <form action="{{ url_for('add_song') }}" method="POST">
+            <label for="title">Song Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="artist">Artist Name:</label><br>
+            <input type="text" id="artist" name="artist" required><br><br>
+
+            <label for="mood">Mood:</label><br>
+            <input type="text" id="mood" name="mood" required><br><br>
+
+            <input type="submit" value="Add Song" class="submit-btn">
+
+            <button id="fixed-button" onclick="window.location.href='/'">Go to Home</button>
+
+            
+
+
+        </form>
+    </div>
+
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="MLG" class="mlg-icon">
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.querySelector('.submit-btn');
+            const form = document.querySelector('form');
+            
+            button.addEventListener('click', function(event) {
+
+                const audio = new Audio('../static/mlg-airhorn.mp3');
+                audio.play().catch(function(error) {
+                    console.error('Playback failed:', error);
+                });
+    
+                event.preventDefault(); 
+
+                setTimeout(function() {
+                    form.submit();
+                }, 1600);
+            });
+        });
+    </script>
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+        
+    <img src="https://media.tenor.com/LWYM-xy8c5gAAAAi/rapidtulip647-rt6.gif" alt="Random GIF 1" class="random-gif" style="top: 30px; left: 50px; width: 200px">
+    <img src="https://media.tenor.com/GIqBiCVMqMYAAAAi/sanic-meme.gif" alt="Random GIF 2" class="random-gif" style="top: 10px; left: 700px;">
+    <img src="https://media1.tenor.com/m/x2aTDE_l-7kAAAAC/tokoyami-towa-novice.gif" alt="Random Image 1" class="random-gif" style="top: 100px; left: 400px; width: 150px">
+    <img src="https://media1.tenor.com/m/ozgQ8i37pWcAAAAC/genitals-dildo.gif" alt="Random GIF 3" class="random-gif" style="top: 50px; left: 1000px; width: 500px">
+    <img src="https://media1.tenor.com/m/qJa7z0pCzDEAAAAC/mlg-penguinz-penguinz.gif" alt="Random Image 2" class="random-gif" style="top: 500px; left: 20px; width: 300px">
+    <img src="https://media1.tenor.com/m/m6SLxq2bZrgAAAAC/anime-cool.gif" alt="Random GIF 4" class="random-gif" style="top: 500px; left: 400px; width: 200px">
+    <img src="https://media1.tenor.com/m/hyu5v1H_nCkAAAAd/rapidtulip647-rt6.gif" alt="Random GIF 5" class="random-gif" style="top: 700px; left: 600px; width: 200px">
+
+</body>
+</html>
+

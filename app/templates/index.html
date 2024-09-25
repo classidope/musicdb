@@ -10,7 +10,7 @@
     <h1>Welcome to <span>musicdb</span></h1>
 
     <h2>Choose a mood to get started</h2>
-    <div class="button-container">
+    <!--<div class="button-container">
         <form action="/search" method="get">
         <ul>
 
@@ -18,8 +18,16 @@
             <button name="mood" value="{{ mood }}" type="submit">{{ mood }}</button>
             {% endfor %}
         </ul>
+    </div> -->
+
+    <div class="booba-container">
+        <form action="/add-song" method="get"> <!-- Use GET for initial access -->
+            <button type="submit" id="boobas">( ๏ 人 ๏ )</button>
+            <div class="arrow-text">Click me to add your favorite songs!</div>
+        </form>
     </div>
 
+        
 <footer><p>•a classid and kuttapan initiative•</p></footer>
 </body>
 </html>
