@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="form-container">
+        <form action="{{ url_for('add_song') }}" method="POST">
+            <label for="title">Song Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="artist">Artist Name:</label><br>
+            <input type="text" id="artist" name="artist" required><br><br>
+
+            <label for="mood">Mood:</label><br>
+            <input type="text" id="mood" name="mood" required><br><br>
+
+            <input type="submit" value="Add Song" class="submit-btn">
+
+            <button id="fixed-button" onclick="window.location.href='/'">Go to Home</button>
+
+        </form>
+    </div>
+
+    <style>
+        body {
+            background-image: url('https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif'); /* Spinning anime gif */
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: rotateBackground 10s infinite linear;
+            color: #ff00ff; /* Vibrant font color */
+            font-family: 'Comic Sans MS', cursive;
+        }
+    </style>
+</body>
+</html>

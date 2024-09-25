@@ -66,5 +66,5 @@ def add_song():
             conn.rollback()
             flash('Failed to add song, cuz it was TRASH. js ;) Try again later, motherfucker')
 
-    return render_template('add_song.html')
+    return render_template('add_song_normal.html')
 
