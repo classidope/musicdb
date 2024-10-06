@@ -9,6 +9,26 @@ body{
     opacity: 0;
     transition: opacity 0.3s ease-in;
 }
+.home{
+    background-color: #454545;
+    border: none;
+    border-radius: 32px;
+    color: rgb(255, 255, 255);
+    translate: -2400% -1800%;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    scale: 150%;
+    font-family: 'Courier New', Courier, monospace;
+    transition: box-shadow 0.1s ease-in,  transform 0.1s ease-in;
+
+}
+.home:hover{
+    background-color: rgba(228, 228, 228, 0.849);
+    box-shadow: 0 0 60px  #dbdbdb;
+    color: #454545;
+    transform: scale(1.05);
+}
 
 body.loaded {
     opacity: 1;

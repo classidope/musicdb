@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>musicdb</title>
@@ -9,24 +12,62 @@
 <body>
     <h1>Welcome to <span>musicdb</span></h1>
 
-    <!-- <h2>Choose a mood to get started</h2>
+    <h2>Choose a mood to get started</h2>
     <div class="button-container">
-        <form action="/search" method="get">
+        <form action="/select" method="get">
         <ul>
 
             {% for mood in Moods %}
             <button name="mood" value="{{ mood }}" type="submit">{{ mood }}</button>
             {% endfor %}
         </ul>
-    </div> -->
-
-    <div class="booba-container">
-        <form action="/add-song" method="get"> 
-         <!--  <button type="submit" id="boobas">( ๏ 人 ๏ )</button> -->
-            <button type="submit"> button btw</button>
-            <div class="arrow-text">Click me to add your favorite songs!</div>
         </form>
     </div>
+
+    <div class="booba-container">
+        <form action="/add-song" method="GET">
+            <button type="submit" class="add-button">+</button>
+            <span class="simple-tooltip">Add Song</span>
+        </form>
+    </div>
+
+    <div class="user-stuff-1">
+        <form action="/register" method="get">
+            <button type="submit" style="font-size: small; width: 60px; border-radius: 5%;"> register </button>
+        </form>
+    </div>
+    
+    <div class="user-stuff-2">
+        <form action="/login" method="get">
+            <button type="submit" style="font-size: small; width: 50px; border-radius: 5%;"> login </button>
+        </form>
+    </div>
+
+    <div class="search-container">
+        <form action="/search" method="GET">
+            <input type="text" name="search_term" placeholder="Enter your search term">
+        
+            <label for="search_field"></label>
+            <select name="search_field">
+                <option value="mood">Mood</option>
+                <option value="artist">Artist</option>
+                <option value="title">Title</option>
+            </select>
+        
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
 
         
 <footer><p>•a classid and kuttapan initiative•</p></footer>

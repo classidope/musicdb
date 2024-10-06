@@ -15,4 +15,4 @@ def connect_to_db():
     )
     return connection
 
-from app import routes  # Import routes after app is created
+from app import routes

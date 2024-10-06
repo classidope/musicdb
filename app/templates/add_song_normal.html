@@ -3,37 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/add.css">
     <title>Document</title>
 </head>
 <body>
     
+    <h1>Add Your Own Songs</h1>
+    
     <div class="form-container">
         <form action="{{ url_for('add_song') }}" method="POST">
-            <label for="title">Song Title:</label><br>
-            <input type="text" id="title" name="title" required><br><br>
+            <div class="title1">
+                <label class="jaba" for="title">Song Title:</label><br>
+                <input class="in1" type="text" id="title" name="title" required></input><br><br>
+            </div>
 
-            <label for="artist">Artist Name:</label><br>
-            <input type="text" id="artist" name="artist" required><br><br>
+            <div class="title2">
+                <label class="jaba" for="artist">Artist Name:</label><br>
+                <input class="in2" type="text" id="artist" name="artist" required></input><br><br>
+            </div>
+            <div class="title3">
+                <label class="jaba" for="mood">Mood:</label><br>
+                <input class="in3" type="text" id="mood" name="mood" required></input><br><br>
+            </div>
 
-            <label for="mood">Mood:</label><br>
-            <input type="text" id="mood" name="mood" required><br><br>
 
-            <input type="submit" value="Add Song" class="submit-btn">
+            <input class="submitit" type="submit" value="Submit" class="submit-btn">
 
-            <button id="fixed-button" onclick="window.location.href='/'">Go to Home</button>
+            <button class="home"  id="fixed-button" onclick="window.location.href='/'"> ←</button>
 
         </form>
     </div>
 
-    <style>
-        body {
-            background-image: url('https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif'); /* Spinning anime gif */
-            background-size: cover;
-            background-repeat: no-repeat;
-            animation: rotateBackground 10s infinite linear;
-            color: #ff00ff; /* Vibrant font color */
-            font-family: 'Comic Sans MS', cursive;
-        }
-    </style>
+    
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
 </body>
 </html>

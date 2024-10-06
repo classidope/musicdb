@@ -9,20 +9,33 @@
             document.body.classList.add('loaded');
         });
     </script>
-    <title>result</title>
+    <title>Search Results</title>
 </head>
 <body>
-    {% if data %}
+    {% if Data %}
         <ul>
-            <h2>Here are some <span>{{ Mood }}</span> songs </h2>
-            {% for song in data %}
-                <li><span>{{ song[2] }}</span><br/> by  {{ song[1] }}</li>
-                <br/>
+            {% if SearchTerm %}
+                <h2>Search results for "{{ SearchTerm }}" in {{ SearchField }}</h2>
+            {% endif %}
+
+            <h2>Songs that are {{Mood}} are:</h2>
+            {% for song in Data %}
+                <li>
+                    <span>{{ song[2] }} </span> <br> by <span>{{ song[1] }} </span>
+                    <form action="/delete-song/{{ song[0] }}" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <form action="/update-song/{{ song[0] }}" method="GET" style="display:inline;">
+                        <button type="submit">Update</button>
+                    </form>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>No results found.</p>
-        <p>go home</p>
+        <p style="font-size: 50px; color:beige; font-family: monospace;">
+            No results found. <br>
+            <button onclick="window.location.href='/'">Go Home</button>
+        </p>
     {% endif %}
 </body>
 </html>
