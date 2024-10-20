@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="../static/register.css">
 </head>
 <body>
-    <h2>Register</h2>
-    <form action="/register" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <button type="submit">Register</button>
-    </form>
+    <div class="card">
+        <h2>sign up</h2>
+        <form class="info" action="/register" method="post">
+
+                <input class="in1" type="text" id="username" name="username" placeholder="username" required><br><br>
+
+                <input class="in2" type="password" id="password" name="password" placeholder="password" required><br><br>
+            <button class="submitit" id="link1" type="submit">Submit</button>
+
+
+            <button class="home"  id="fixed-button" onclick="window.location.href='/'"> ←</button>
+        </form>
+    </div>
+    <div class="user-stuff-2"></div>
+        <form action="/login" method="get">
+            <p class="logintext">already have an account?</p>
+            <button class="login" type="submit" "> sign in </button>
+        </form>
+    </div>
+    
 
     {% with messages = get_flashed_messages() %}
     {% if messages %}

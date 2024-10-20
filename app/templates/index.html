@@ -18,35 +18,29 @@
         <ul>
 
             {% for mood in Moods %}
-            <button name="mood" value="{{ mood }}" type="submit">{{ mood }}</button>
+            <button class="moods" name="mood" value="{{ mood }}" type="submit">{{ mood }}</button>
             {% endfor %}
         </ul>
         </form>
     </div>
 
-    <div class="booba-container">
+    <div class="boom-container">
         <form action="/add-song" method="GET">
-            <button type="submit" class="add-button">+</button>
+            <button class="add" type="submit" class="add-button">+</button>
             <span class="simple-tooltip">Add Song</span>
         </form>
     </div>
 
-    <div class="user-stuff-1">
-        <form action="/register" method="get">
-            <button type="submit" style="font-size: small; width: 60px; border-radius: 5%;"> register </button>
-        </form>
-    </div>
-    
     <div class="user-stuff-2">
         <form action="/login" method="get">
-            <button type="submit" style="font-size: small; width: 50px; border-radius: 5%;"> login </button>
+            <button class="login" type="submit""> log in </button>
         </form>
     </div>
 
     <div class="search-container">
         <form action="/search" method="GET">
             <input type="text" name="search_term" placeholder="Enter your search term">
-        
+
             <label for="search_field"></label>
             <select name="search_field">
                 <option value="mood">Mood</option>

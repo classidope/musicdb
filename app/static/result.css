@@ -14,11 +14,14 @@ body{
     border: none;
     border-radius: 32px;
     color: rgb(255, 255, 255);
-    translate: -2400% -1800%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    /* translate: -1000% -850%; */
     font-size: 20px;
-    height: 30px;
-    width: 30px;
-    scale: 150%;
+    height: 50px;
+    width: 50px;
     font-family: 'Courier New', Courier, monospace;
     transition: box-shadow 0.1s ease-in,  transform 0.1s ease-in;
 
@@ -60,16 +63,26 @@ li:hover {
 li:hover span{
     color: #e4dd1a;
 }
+.delete{
+    border: none;
+    border-radius: 32px;
+    height: 25px;
+    width: 25px;
+    background-color: #454545;
+    color: #cccaca;
+}
+.edit{
+    border: none;
+    border-radius: 32px;
+    height: 25px;
+    width: 25px;
+    background-color: #454545;
+    color: #cccaca;
+}
 
-@media only screen and (max-width: 600px) {
-    h2{
-        scale: 80%;
-    }
-    li{
-        scale: 80%;
-    }
-    li:hover{
-        scale:0.90;
-    }
-
+.delete:hover{
+    color: #ef5d5d;
+}
+.edit:hover{
+    color: #e4dd1a;
 }

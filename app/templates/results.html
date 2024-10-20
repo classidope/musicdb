@@ -1,8 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html>]
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="../static/result.css">
     <script>
         window.addEventListener('load', () => {
@@ -18,15 +21,15 @@
                 <h2>Search results for "{{ SearchTerm }}" in {{ SearchField }}</h2>
             {% endif %}
 
-            <h2>Songs that are {{Mood}} are:</h2>
+            <h2>Songs that are <span>{{Mood}} </span>are:</h2>
             {% for song in Data %}
                 <li>
-                    <span>{{ song[2] }} </span> <br> by <span>{{ song[1] }} </span>
+                    <span>{{ song[2] }} </span> <br> by {{ song[1] }} 
                     <form action="/delete-song/{{ song[0] }}" method="POST" style="display:inline;">
-                        <button type="submit">Delete</button>
+                        <button class="delete" type="submit"><i class="fa fa-trash"></i></button>
                     </form>
                     <form action="/update-song/{{ song[0] }}" method="GET" style="display:inline;">
-                        <button type="submit">Update</button>
+                        <button class="edit" type="submit"><i class="fa fa-pencil"></i></button>
                     </form>
                 </li>
             {% endfor %}
@@ -34,8 +37,10 @@
     {% else %}
         <p style="font-size: 50px; color:beige; font-family: monospace;">
             No results found. <br>
-            <button onclick="window.location.href='/'">Go Home</button>
+            <button class="home" onclick="window.location.href='/'">←</button>
         </p>
     {% endif %}
+    <button class="home" onclick="window.location.href='/'">←</button>
+    
 </body>
 </html>

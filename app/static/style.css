@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
+
+
 body{
     background-color: rgb(16, 16, 16);
     display: flex;
@@ -36,7 +39,7 @@ ul{
     flex-wrap: wrap;
 }
 
-button{
+.moods{
 
     width: 100px; /* Adjust the width as needed */
     height: 30px; /* Adjust the height as needed */
@@ -55,12 +58,37 @@ button{
     transition: background-color 0.3s ease-in, transform 0.1s ease-in;
 }
 
-button:hover {
+.moods:hover {
     background-color: rgba(38, 38, 38, 0.849);
     transform: scale(1.05);
     border: 2px solid #000; /* Set the initial border style */
     animation: border-flow 1s infinite linear;
     color: #e4dd1a;
+}
+
+
+.add{
+    background-color: #454545;
+    border: none;
+    border-radius: 32px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    /* translate: -1000% -850%; */
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: box-shadow 0.1s ease-in,  transform 0.1s ease-in;
+   
+}
+.add:hover{
+    background-color: rgba(228, 228, 228, 0.849);
+    box-shadow: 0 0 60px  #dbdbdb;
+    color: #454545;
+    transform: scale(1.05);
 }
 
 h1 span{
@@ -95,40 +123,54 @@ h1:hover:after {
     padding: 10px;
     position: fixed;
     top: 0;
+    padding-top: 40px;
+    scale: 120%;
+    
 }
 
 .search-container input[type="text"] {
     padding: 10px;
     width: 300px;
     font-size: 12px;
-    font-family: poppins;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    border: None;
+    border-radius: 32px;
     outline: none;
+    background-color: #454545;
+    color: #dbdbdb;
 }
 
 .search-container select {
     padding: 10px;
     font-size: 12px;
-    font-family: poppins;
-    border: 1px solid #ccc;
+    font-family: 'Space Mono', monospace;
+    border: None;
     border-left: none;
-    border-radius: 4px;
+    border-radius: 32px;
     outline: none;
+    background-color: #454545;
+    color: #dbdbdb;
 }
 
 .search-container button {
     font-size: 12px;
-    font-family: poppins;
-    color: white;
-    border: 1px;
-    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    color: rgb(23, 23, 23);
+    border: none;
+    border-radius: 32px;
     cursor: pointer;
+    height: 34px;
+    width: 90px;
+    background-color: #454545;
+    color: #dbdbdb;
+
 }
 
 .search-container button:hover {
-    background-color: #1a1ae4;
-}
+    background-color: #f0f0f6;
+    color: #1f1f1f;
+
+} 
 
 .search-container label {
     margin-right: 10px;
@@ -141,7 +183,7 @@ h1:hover:after {
     border-color: #ff4b2b;
 }
 
-.booba-container {
+.boom-container {
     position: fixed;
     bottom: 0;
 
@@ -152,22 +194,18 @@ h1:hover:after {
 .simple-tooltip {
     display: none;
     position: absolute;
-    top: -25px; /* Show the tooltip above the button */
+    top: -110px; /* Show the tooltip above the button */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-130%);
     color: white;
     padding: 5px;
     border-radius: 3px;
-    font-family: poppins;
-    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
-.booba-container:hover .simple-tooltip {
+.boom-container:hover .simple-tooltip {
     display: inline;
-}
-
-.booba-container button{
-    width: 30px;
 }
 
 .user-stuff-1 {
@@ -204,49 +242,30 @@ h1:hover:after {
 }
 
 
-#boobas {
+
+
+.login {
+    display: inline-block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #454545;
     border: none;
-    background: none;
-    outline: none;
-    color: #e4dd1a;
+    border-radius: 32px;
+    color: rgb(220, 220, 220);
+    font-family: 'Space Mono', monospace;
+    color: #dbdbdba2;
+    height: 29px;
+    width: 60px;
+    transition: background-color 0.3s ease-in, transform 0.1s ease-in;
 }
-
-@media only screen and (max-width: 600px) {
-    @media (max-width: 768px) {
-        .search-container input[type="text"] {
-            width: 200px;
-        }
-    }
-    button{
-
-        width: 100px; 
-        height: 30px; 
-        background: rgba(114, 114, 114, 0.286);
-        border: none;
-        outline: none;
-        border-radius: 35cm;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-        color: #ffffffe7;
-        border: none;
-        margin: 25px;
-        font-size: 16px;
-        font-weight: 550;
-        scale: 130%;
-        transition: background-color 0.3s ease-in, transform 0.1s ease-in;
-        background-color: rgba(38, 38, 38, 0.849);
-        transform: scale(1.05);
-        border: 2px solid #000; /* Set the initial border style */
-        animation: border-flow 2s infinite linear;
-    }
-    h1{
-        scale: 100%;
-    }
-    h2{
-        font-size: 20px;
-    }
-    button:hover {
-        color: #5a96c7;
-    }
+.login:hover {
+    background-color: rgba(235, 235, 235, 0.849);
+    transform: scale(1.05);
+    border: 2px solid #d0d0d0aa; /* Set the initial border style */
+    animation: border-flow 1s infinite linear;
+    color: #242424;
+    box-shadow: 0 0 30px  #dbdbdb8d;
 }
 footer{
     color: #dfdfdd58;
@@ -254,3 +273,4 @@ footer{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: small;
 }
+

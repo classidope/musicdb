@@ -4,18 +4,17 @@
     padding-left: 10px;
     padding-right: 10px;
 } */
-
 body{
     background-color: rgb(16, 16, 16);
 }
-h1{
+h2{
     color: #e4dd1a;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     scale: 150%;
-    translate: -1% 650%;
+    translate: -1% 850%;
     font-family: 'Space Mono', monospace;
 
 }
@@ -26,18 +25,15 @@ h1{
     font-weight: 550;
 }
 
-.title1{
-    translate: 23% 350%;
-}
-.title2{
-    translate: 43% 250%;
-}
-.title3{
-    translate: 63% 150%;
-}
+
 
 .in1{
     background-color: rgba(73, 73, 73, 0.806);
+    position: fixed;
+    bottom: 0;
+    top: 400px;
+    left: 530px;
+    right: 0;
     height: 55px;
     width: 180px;
     border: none;
@@ -52,25 +48,16 @@ h1{
 
 .in2{
     background-color: rgba(73, 73, 73, 0.806);
+    position: fixed;
+    bottom: 0;
+    top: 400px;
+    left: 760px;
+    right: 0;
     height: 55px;
     width: 180px;
     border: none;
     border-radius: 10px;
     color: aliceblue;
-    transition: box-shadow 0.2s ease-in;
-    font-family: monospace;
-    font-size: large;
-    padding-left: 10px;
-    padding-right: 10px;
-
-}
-.in3{
-    background-color: rgba(73, 73, 73, 0.806);
-    height: 55px;
-    width: 180px;
-    border: none;
-    border-radius: 10px;
-    color: rgb(226, 226, 226);
     transition: box-shadow 0.2s ease-in;
     font-family: monospace;
     font-size: large;
@@ -84,7 +71,7 @@ h1{
     border: none;
     border-radius: 10px;
     color: rgb(220, 220, 220);
-    translate: 1005% 700%;
+    translate: 1005% 1300%;
     height: 30px;
     width: 70px;
     scale: 170%;
@@ -110,12 +97,6 @@ h1{
     transition: box-shadow 0.1s ease-in,  transform 0.1s ease-in;
 
 }
-.home:hover{
-    background-color: rgba(228, 228, 228, 0.849);
-    box-shadow: 0 0 60px  #dbdbdb;
-    color: #454545;
-    transform: scale(1.05);
-}
 
 .submitit:hover {
     background-color: rgba(235, 235, 235, 0.849);
@@ -126,6 +107,13 @@ h1{
     box-shadow: 0 0 30px  #dbdbdb8d;
 }
 
+.home:hover{
+    background-color: rgba(228, 228, 228, 0.849);
+    box-shadow: 0 0 60px  #dbdbdb;
+    color: #454545;
+    transform: scale(1.05);
+}
+
 
 .in1:hover{
     box-shadow: 0 0 60px  #98989760;
@@ -133,6 +121,34 @@ h1{
 .in2:hover{
     box-shadow: 0 0 60px  #98989760;
 }
-.in3:hover{
-    box-shadow: 0 0 60px  #98989760;
+
+.login {
+    display: inline-block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #454545;
+    border: none;
+    border-radius: 10px;
+    color: rgb(220, 220, 220);
+    font-family: 'Space Mono', monospace;
+    height: 40px;
+    width: 85px;
+    transition: background-color 0.3s ease-in, transform 0.1s ease-in; 
+}
+.login:hover {
+    background-color: rgba(235, 235, 235, 0.849);
+    transform: scale(1.05);
+    border: 2px solid #d0d0d0aa; /* Set the initial border style */
+    animation: border-flow 1s infinite linear;
+    color: #242424;
+    box-shadow: 0 0 30px  #dbdbdb8d;
+}
+.logintext{
+    display: inline-block;
+    position: fixed;
+    top: 10px;
+    right: 120px;
+    color: rgb(142, 142, 142);
+    font-family: 'Space Mono', monospace;
 }
